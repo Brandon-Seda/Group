@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET login page. */
 router.get('/', function(req, res, next) {
-  res.send('login', { title: 'Login Page' });
+  res.render('login', { title: 'Login' });
 });
 
 module.exports = router;
