@@ -1,13 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET login page. */
+/* GET register page. */
 router.get('/', function(req, res, next) {
- register_page
-  res.render('login', { title: 'Login' });
-
-  res.render('login', { title: 'Login' });
-main
+  res.render('register', { title: 'Register Page' });
 });
 
 module.exports = router;

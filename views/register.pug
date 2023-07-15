@@ -1,0 +1,21 @@
+extends layout 
+
+block content 
+    h1 Register 
+    br
+
+    form(role='register', action='/createAccount', method='post')
+        .register-group 
+            label(for='email') Email 
+            input.form-control(type='email', id='email', name='email', placeholder='Enter an email')
+        .register-group
+            label(for='username') Username
+            input.form-control(type='text', id='user', name='username', placeholder='Enter a username')
+        .register-group
+            label(for='password') Password
+            input.form-control(type='password', id='password', name='password', placeholder='Enter a password')
+        .register-group
+            label(for='conf-password') Confirm Password
+            input.form-control(type='password', id='conf-password', name='conf-password', placeholder='Confirm Password')
+        button.btn.btn-primary(type='submit') Submit
+        button.btn.btn-primary(type='cancel') Cancel    
