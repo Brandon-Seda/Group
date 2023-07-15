@@ -18,7 +18,7 @@ Initially it will start with more well known games and expand on from there.
 - Express
 - MongoDB
 - Firebase
-- Figma
+
 
 
 
