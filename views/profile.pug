@@ -1,0 +1,20 @@
+block scripts
+  script(src="/javascripts/scripts.js") 
+
+block content
+  ul.header-navigation
+    a(href='/') Home    
+    //- a(href='/groupFinder') Find a Team
+    //- a(href='/setting') Settings
+    //- a(href='/signout') Sign Out
+  .profile-container
+    h1 Username Here
+    .profile-pic
+      form(action='/profile' method='POST' enctype='multipart/form-data')
+        label(for='profilePictureInput')
+          img#profilePicture(src='./images/user.png', width='100px' height='100px' alt='Profile Picture')
+          input#profilePictureInput(type='file' name='profilePicture' onchange='displayImage(this)')
+    .profile-info 
+        h3 About me 
+            form(action='/profile' method='POST' )
+                textarea#aboutMeText(name='aboutMeTextContainer' rows='4' cols='50' placeholder='Write about yourself here!')
