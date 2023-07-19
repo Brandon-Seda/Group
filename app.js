@@ -4,11 +4,26 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+const { connectToDb, getDb } = require('./server')
+
 var homeRouter = require('./routes/home');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
 var registerRouter = require('./routes/register');
 var profileRouter = require('./routes/profile');
+
+
+//database connection
+let db
+
+connectToDb(() => {
+  if(!err) {
+    app.listen(3000, () => {
+      console.log("Server is running on port 3000")
+    })
+    db = getDb()
+  }
+})
 
 var app = express();
 
@@ -43,5 +58,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
 
 module.exports = app;
