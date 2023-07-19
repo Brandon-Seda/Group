@@ -1,12 +1,12 @@
 require('dotenv').config();
 
-const { MongoClient } = require('mongodb');
+const { mongoose } = require('mongoose');
 
 let dbConnection
 
 module.exports = {
     connectToDb: (cb) => {
-        MongoClient.connect('mongodb://localhost:27017/groupd')
+        mongoose.connect('mongodb://localhost:27017/groupd')
         .then((client) => {
             dbConnection = client.db()
             return cb
@@ -18,3 +18,4 @@ module.exports = {
     },
     getDb: () => dbConnection
 }
+
