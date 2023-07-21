@@ -14,7 +14,7 @@ Initially it will start with more well known games and expand on from there.
 
 ## Technologies in mind
 - React
-- Node.JS or Next.JS
+- Node.JS
 - Express
 - MongoDB
 - Firebase

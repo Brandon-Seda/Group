@@ -1,21 +1,18 @@
-require('dotenv').config();
 
-const { mongoose } = require('mongoose');
+const mongoose = require('mongoose');
 
-let dbConnection
+const connectToDatabase = async () => {
+  try {
+    await mongoose.connect(process.env.MONGODB_URL, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
 
-module.exports = {
-    connectToDb: (cb) => {
-        mongoose.connect('mongodb://localhost:27017/groupd')
-        .then((client) => {
-            dbConnection = client.db()
-            return cb
-        })
-        .catch(err => {
-            console.log(err)
-            return cb(err)
-        })
-    },
-    getDb: () => dbConnection
-}
+    console.log('Connected to the database!');
+  } catch (error) {
+    console.error('Error connecting to the database:', error);
+  }
+};
+
+module.exports = connectToDatabase;
 

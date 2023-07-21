@@ -1,10 +1,10 @@
+require('dotenv').config();
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
-const { connectToDb, getDb } = require('./server')
 
 var homeRouter = require('./routes/home');
 var usersRouter = require('./routes/users');
@@ -13,20 +13,11 @@ var registerRouter = require('./routes/register');
 var profileRouter = require('./routes/profile');
 var gamesRouter = require('./routes/games');
 
-
-//database connection
-let db
-
-connectToDb((err) => {
-  if(!err) {
-    app.listen(3000, () => {
-      console.log("Server is running on port 3000")
-    })
-    db = getDb()
-  }
-})
-
+const connectToDatabase = require('./server')
 var app = express();
+
+
+connectToDatabase();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
