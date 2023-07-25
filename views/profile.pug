@@ -1,12 +1,7 @@
-block scripts
-  script(src="/javascripts/scripts.js") 
+extends layout 
 
 block content
-  ul.header-navigation
-    a(href='/') Home    
-    //- a(href='/groupFinder') Find a Team
-    //- a(href='/setting') Settings
-    //- a(href='/signout') Sign Out
+  include ../components/navbar.pug
   .profile-container
     h1 Username Here
     .profile-pic
