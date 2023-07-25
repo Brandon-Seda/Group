@@ -1,11 +1,7 @@
 extends layout
 
 block content
-  .header-navigation
-    a(href='/index') Home
-    a(href='groupFinder') Find a Team
-    a(href='/setting') Settings
-    a(href='/signout') Sign Out
+  include ../components/navbar.pug
 
   .games-card 
     h3 League of Legends
