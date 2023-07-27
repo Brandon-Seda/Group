@@ -5,7 +5,7 @@ block content
     h1 Register 
     br
 
-    form(role='register', action='/createAccount', method='post')
+    form(role='register', action='/createAccount', method='post' id='registerForm')
         .register-group 
             label(for='email') Email 
             input.form-control(type='email', id='email', name='email', placeholder='Enter an email')
