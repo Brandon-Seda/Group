@@ -2,8 +2,28 @@ extends layout
 
 block content
   include ../components/navbar.pug
+  .card-container
+      .card 
+        h2= `What is GroupD?`
+        p= `GroupD is a platform allowing gamers to connect to one another to play their favorite games with the freedom ! It is really simple.`
+        img(src='./images/LeagueofLegends.jpeg' alt='League of Legends' width='1000' height='400')
+        hr
+      .card 
+        h2=  `Create an account!`
+        p=  `Once you have an account you can set up your profile displaying your favorite games and competitive ranks!`
+        img(src='./images/rocketLeague.jpeg' alt='Rocket League' width='1000' height='400')
+        hr
+      .card 
+        h2= `Find a group!`
+        p= `Create or join a group for your favorite games and even set it to show if you are looking to play competitive or not`
+        img(src='./images/Minecraft.jpeg' alt='Minecraft' width='1000' height='400')
+        hr
+      .card 
+        h2= `Have Fun!`
+        hr
+        p= `Once you find your team prepare to have fun!`
+        img(src='./images/apexLegends.jpg' alt='Apex Legends' width='1000' height='400')
 
-  h1 Home 
-
-
-
+block footer 
+  .footer
+    p=  '© 2023 GroupD. All rights reserved.'

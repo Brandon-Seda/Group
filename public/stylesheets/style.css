@@ -2,22 +2,47 @@
   font-family: 'Oswald' ;
 }
 
-a {
-  color: #00B7FF;
-}
-
-.header-navigation {
-  font-size: 24px;
-  width: 100%;
-  position: fixed;  
+body {
   margin: 0;
-  padding: 10px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: gray;
+  padding: 0;
+  height: 100vh;
 }
 
-.header-navigation:hover {
-  cursor: pointer;
+.header {
+  background-color: #c4defd; 
+  color: #021327;
+  width: 100%;
+  font-size: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header-menu { 
+ display: flex;
+ justify-content: space-evenly;
+}
+
+.header-menu a{
+  text-decoration: none;
+  color: #030d21;
+  padding:  10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header-menu a:hover {
+  background-color: #bbcdff;
+  color: #030d21;
+}
+
+hr {
+  list-style: solid;  
+  color: #0a6feb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
