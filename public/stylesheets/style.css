@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  width: 100%;
 }
 
 .header {
@@ -45,4 +46,50 @@ hr {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.card {
+  flex: 1 0 calc(50% - 20px); 
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc; 
+  display: flex;
+  flex-direction: column; 
+}
+
+#left.card {
+  flex-direction: row;
+}
+
+#right.card {
+  flex-direction: row-reverse;
+}
+#right.card h2, #right.card h3, #right.card p {
+  flex-direction: row;
+}
+
+.card img {
+  width: 100%; 
+  height: auto;
+  order: 1;
+}
+
+.card h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 10px; 
+}
+
+.card h3 {
+  font-size: 24px;
+}
+
+.card p {
+  font-size: 16px;
 }
