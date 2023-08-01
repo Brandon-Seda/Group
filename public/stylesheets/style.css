@@ -2,22 +2,94 @@
   font-family: 'Oswald' ;
 }
 
-a {
-  color: #00B7FF;
-}
-
-.header-navigation {
-  font-size: 24px;
-  width: 100%;
-  position: fixed;  
+body {
   margin: 0;
-  padding: 10px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: gray;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
 }
 
-.header-navigation:hover {
-  cursor: pointer;
+.header {
+  background-color: #c4defd; 
+  color: #021327;
+  width: 100%;
+  font-size: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header-menu { 
+ display: flex;
+ justify-content: space-evenly;
+}
+
+.header-menu a{
+  text-decoration: none;
+  color: #030d21;
+  padding:  10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header-menu a:hover {
+  background-color: #bbcdff;
+  color: #030d21;
+}
+
+hr {
+  list-style: solid;  
+  color: #0a6feb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.card {
+  flex: 1 0 calc(50% - 20px); 
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc; 
+  display: flex;
+  flex-direction: column; 
+}
+
+#left.card {
+  flex-direction: row;
+}
+
+#right.card {
+  flex-direction: row-reverse;
+}
+#right.card h2, #right.card h3, #right.card p {
+  flex-direction: row;
+}
+
+.card img {
+  width: 100%; 
+  height: auto;
+  order: 1;
+}
+
+.card h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 10px; 
+}
+
+.card h3 {
+  font-size: 24px;
+}
+
+.card p {
+  font-size: 16px;
 }

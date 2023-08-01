@@ -2,8 +2,39 @@ extends layout
 
 block content
   include ../components/navbar.pug
+  .card-container
+      #left.card
+        .content
+          h2= `Join, Connect, Dominate!`
+          p= `Are you a passionate gamer looking to take your gaming experience to the next level? Look no further! GamerConnect is your one-stop destination for building connections, creating teams, and embracing the thrill of competitive gaming. `
+        img(src='./images/LeagueofLegends.jpeg' alt='League of Legends')
+      #right.card
+        .content
+          h2=  `Create an account and choose your games!`
+          h3= `Create a profile:`
+          p=  `Start by creating your personalized gamer profile. Showcase your gaming prowess, achievements, and interests. Let the gaming community know who you are and what makes you stand out from the rest.`
+          h3= `Choose your Games:`
+          p= `Whether you're a fan of intense first-person shooters, strategy-packed MOBAs, heart-pounding battle royales, or immersive RPGs, GamerConnect caters to all gaming genres. Select the games you love and display them proudly on your profile.`
+        img(src='./images/rocketLeague.jpeg' alt='Rocket League')
+      #left.card
+        .content
+          h2= `Form and Join Groups for Epic Adventures`
+          h3= `Discover and Join Groups:`
+          p= `Connect with like-minded gamers by joining existing groups or clans. Unite under a common banner and embark on epic gaming adventures together. Whether you seek a tight-knit squad for casual play or a seasoned team to dominate the leaderboards, GamerConnect has the perfect group for you.`
+          h3= `Create Your Own Group:`
+          p= `Forge your own path to glory! If you're a natural-born leader, create your very own gaming group. Recruit top-tier talent, plan strategies, and become a formidable force in the gaming world.`
+        img(src='./images/Minecraft.jpeg' alt='Minecraft')
+      #right.card 
+        .content
+          h2= `Elevate Your Gaming Experience with GroupD`
+          h3= `Premade Teams for Victory:`
+          p= `Tired of unreliable teammates? GamerConnect's premade team feature ensures you never face the battlefield alone. Join or form a premade team, and together, conquer challenges that once seemed insurmountable.`
+          h3= `Level Up Your Gaming Experience:`
+          p= `GamerConnect is more than just a website; it's a gateway to a world of gaming possibilities. So, gear up, connect with fellow gamers, and embark on a journey filled with epic wins and unforgettable moments.`
+          p= `Join us now and let the gaming adventure begin! Together, we'll redefine what it means to be a true gaming legend. Welcome to GamerConnect - where gamers unite!`
+        img(src='./images/apexLegends.jpg' alt='Apex Legends')
 
-  h1 Home 
 
-
-
+block footer 
+  .footer
+    p=  '© 2023 GroupD. All rights reserved.'
