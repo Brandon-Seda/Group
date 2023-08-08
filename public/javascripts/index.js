@@ -7,3 +7,4 @@ function displayImage(input) {
       reader.readAsDataURL(input.files[0]);
     }
 }
+
