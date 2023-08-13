@@ -7,11 +7,19 @@ body {
   padding: 0;
   height: 100vh;
   width: 100%;
+  background-color: #f6eef5;
+}
+
+.body-container {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  margin: 0;
 }
 
 .header {
-  background-color: #c4defd; 
-  color: #021327;
+  background-color: #a27dba; 
+  color: #020302;
   width: 100%;
   font-size: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -24,7 +32,7 @@ body {
 
 .header-menu a{
   text-decoration: none;
-  color: #030d21;
+  color: #020302;
   padding:  10px 20px;
   border-radius: 4px;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -32,21 +40,17 @@ body {
 
 .header-menu a:hover {
   background-color: #bbcdff;
-  color: #030d21;
+  color: #020302;
 }
 
-hr {
-  list-style: solid;  
-  color: #0a6feb;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.footer {
+footer p {
   position: fixed;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 }
+
+/* || Home Page Styling */
 
 .card-container {
   display: flex;
@@ -92,4 +96,47 @@ hr {
 
 .card p {
   font-size: 16px;
+}
+
+/* || Register / Login styles */
+
+.form-container { 
+  height: 80%;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+
+.form-container h1 {
+  font-size: 48px;
+  text-align: center;
+}
+
+.errorMessage {
+  color: red;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  width: 100%;
+  display: flex;
+  align-items: right;
+  justify-content: right;
+  gap: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #302c54;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #6d64b7;
 }

@@ -1,0 +1,29 @@
+.body-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+label {
+    font-size: 20px;
+    flex: 1;
+    text-align: right;
+    margin-right: 10px;
+}
+
+input { 
+    flex: 2;
+    height: 24px;
+}
+   
+label, input {
+    margin-bottom: 10px;
+}
