@@ -19,13 +19,13 @@ router.post('/', async (req, res, next)  => {
     });
     if(existingUser) {
       payload.error = 'Email or username already is already registered.'
-      return res.status(400).render('/register');
+      return res.render('register');
     }
     // Checks if password meets requirements
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     if(!passwordRegex.test(req.body.password)) {
       payload.error = 'Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character.';
-      return res.status(400).render('/register');
+      return res.render('register');
     }
 
     // Hash password for protection
@@ -45,11 +45,11 @@ router.post('/', async (req, res, next)  => {
     await newUser.save();
     
     console.log('success');
-    return res.status(200).render('/home', payload);
+    return res.render('home', payload);
   }
   catch(error){
     console.log('not a success');
-    return res.status(400).render('/register', payload);
+    return res.render('register', payload);
   }   
 });
 
