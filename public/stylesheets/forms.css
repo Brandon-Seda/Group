@@ -4,7 +4,7 @@
     align-items: center;
 }
 
-.register-group{
+.form-group{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -16,7 +16,7 @@ label {
     font-size: 20px;
     flex: 1;
     text-align: right;
-    margin-right: 10px;
+    margin-right: 12px;
 }
 
 input { 
@@ -26,4 +26,21 @@ input {
    
 label, input {
     margin-bottom: 10px;
+}
+
+.lead {
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #302c54;
+}
+
+a:hover {
+    color: #6d64b7
+}
+
+#forgot {
+    padding-top: 18px;
 }
