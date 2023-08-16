@@ -1,7 +1,7 @@
 extends layout 
 
 block styles 
-    link(rel='stylesheet', href='../stylesheets/registration.css')
+    link(rel='stylesheet', href='../stylesheets/forms.css')
 
 block content 
     include ../components/navbar.pug
@@ -10,22 +10,22 @@ block content
             h1 Register 
             form(role='register', method='post' id='registerForm')
                 p.errorMessage #{errorMessage}
-                .register-group 
+                .form-group 
                     label(for='firstName') First Name 
                     input.form-control(type='text', id='firstName', name='firstName', autocomplete='off', placeholder='Enter your First Name')
-                .register-group 
+                .form-group 
                     label(for='lastName') Last Name 
                     input.form-control(type='text', id='lastName', name='lastName', autocomplete='off', placeholder='Enter your Last Name')
-                .register-group 
+                .form-group 
                     label(for='email') Email 
                     input.form-control(type='email', id='email', name='email', autocomplete='off', placeholder='Enter an email')
-                .register-group
+                .form-group
                     label(for='username') Username
                     input.form-control(type='text', id='user', autocomplete='off', name='username', placeholder='Enter a username')
-                .register-group
+                .form-group
                     label(for='password') Password
                     input.form-control(type='password', id='password', name='password', autocomplete='off', placeholder='Enter a password')
-                .register-group
+                .form-group
                     label(for='conf-password') Confirm Password
                     input.form-control(type='password', id='conf-password', name='conf-password', placeholder='Confirm Password')
                 .button-group
